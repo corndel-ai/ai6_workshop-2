@@ -2,11 +2,13 @@
 # Welcome to Workshop 2!
 
 **This is the second workshop of the Level 6 AI/ML Engineer programme, focusing on going from an idea to a Minimum Viable Product (MVP).**
-Read this file in conjunction with the auxiliary files: model_card.md, and risk_register.md.
+
+Read this file in conjunction with the auxiliary files: [`user_brief.md`](./user_brief.md) and [`model_card.md`](./model_card.md).
+
 
 ## What you've already done this morning to prepare:
 
-You have discussed the Derm-Assist MVP case study, proposing a tool to help GPs triage skin lesion images. 
+You have discussed the Derm-Assist MVP case study, proposing a tool to help GPs triage skin lesion images. You should refer to both the user brief ([`user_brief.md`](./user_brief.md)) and the model card ([`model_card.md`](./model_card.md)) and ask your coach if anything is unclear about the brief and/or the model.
 
 Case studies are simplified but realistic scenarios designed to let you practise the translation of user needs into MVP features. Derm-Assist is not a real medical product. The exercise is about decision-making and risk awareness, not clinical accuracy.
 
@@ -46,24 +48,32 @@ _This contrast illustrates both the power of rapid deployment and the risks of d
 
 ### 1\. Prerequisites
 
-You will need an active AWS SageMaker Studio environment with a running JupyterLab space, as configured in Workshop 1.
+You will need an active AWS SageMaker Studio environment with a running JupyterLab space, as you should remember from your Workshop 1.
 
-> **Amazon SageMaker AI** is a fully managed service from AWS that simplifies the process of building, training, and deploying machine learning (ML) models at scale. For this workshop, we are using it to rapidly deploy a pre-trained model as a live endpoint.
+> Remember: **Amazon SageMaker AI** is a fully managed service from AWS that simplifies the process of building, training, and deploying machine learning (ML) models at scale. For this workshop, we are using it to rapidly deploy a pre-trained model as a live endpoint.
 
 ### 2\. Upload and Run the Code
 
-1.  Using the file browser on the left of your JupyterLab space, upload the `deployment_script.py` and `test_script.py` files.
-2.  Create a new Jupyter Notebook (`.ipynb`) in the same top-level directory. Your folder structure should be simple:
+1. Remember that to create your Jupyter environment, you can use the top search bar to look for Sagemaker. From Sagemaker, you want to look at the Notebooks item (in the left-hand-side menu), and from there create a new notebook instance. It will take 3-5 minutes to provision.
+2.  When it's ready, launch it as JupyterLab. Using the file browser on the left of your JupyterLab space, upload the `deployment_script.py` and `test_script.py` files. Alternatively, create two new Python files (not notebooks!) and paste the contents from this GitHub repo, then rename them so that the filenames are `deployment_script.py` and `test_script.py`.
+3.  Create a new Jupyter Notebook (`.ipynb`) in the same top-level directory. At this point, your folder structure should be simple:
     ```
     deployment_script.py
     test_script.py
     Untitled.ipynb
     ```
-3.  In the first cell of the notebook, execute the deployment script by typing: `!python deployment_script.py`
-4.  Run the cell. The script will begin deploying the model to a SageMaker endpoint. This will take **3-5 minutes**. The script's output will show progress, and at the end, it will print the `Endpoint Name`. **Copy this name**.
-5.  In a new cell, open the `test_script.py` file to edit it. Paste the `Endpoint Name` you copied into the `ENDPOINT_NAME` variable at the top of the script. Save the file.
-6.  Now, execute the test script in the new cell by typing: `!python test_script.py`
-7.  Run the cell. The script will send a test image to your live endpoint and print the model's classification predictions. You can edit the `IMAGE_URL` in the test script to try out the different images provided by your coach.
+4.  In the first cell of the notebook, execute the deployment script by typing: `!python deployment_script.py`
+5.  Run the cell. The star [*] at the top will tell you that your code is running. After 1-2 minutes, the script will begin deploying the model to a SageMaker endpoint. This will take **another 5-6 minutes**. The script's output will show progress, and at the end, it will print the `Endpoint Name`.
+_Be warned that when you see "Deploying model to endpoint: mvp-derm-assist-1762175727..." this is not the final step. You need to give it two more minutes. The final line will look like:_
+```
+-------!
+✅ Deployment complete!
+Endpoint Name: mvp-derm-assist-1762175727
+```
+6.  In a new Jupyterlab tab, open the `test_script.py` file to edit it. Paste the `Endpoint Name` you copied into the `ENDPOINT_NAME` variable at the top of the script (remember quotation marks at both sides to tell Python that it's a String). Save the file.
+7.  At this point you need to make sure that you uploaded the images files into your Jupyterlab environment from this GitHub repo (the folders __fun_images__ and __skin_proxies__). 
+8.  Now, execute the test script in the new cell of your original Python Notebook (Untitled.ipynb tab) by typing: `!python test_script.py`
+9.  Run the cell. The script will send a test image to your live endpoint and print the model's classification predictions. You can edit the `IMAGE_URL` in the test script to try out the different images provided by your coach.
 
 -----
 
@@ -98,6 +108,9 @@ This links directly back to the compliance stories on your project board. A mode
 
 As you see the predictions appear, consider how this rapid feedback loop allows an AI Engineer to identify and address these critical ethical and regulatory risks at the very beginning of a project, not at the end.
 
+### The Curveball Challenge
+You will then carry out the curveball challenge as explained in:
+[`Curveball_brief.md`](./Curveball_brief.md).
 
 ### Workflow in plain English
 ```
@@ -108,6 +121,7 @@ Spin up a Hugging Face container inside SageMaker with PyTorch + Transformers in
 Pull the model weights automatically from Hugging Face Hub into that container.
 Expose the model as a live HTTPS endpoint you can call.
 You now have a production-ready REST API for inference in ~30 lines of code.
+...But the requirements keep changing! The curveball challenge explains this.
 ```
 ## Reflection and Debrief
 
@@ -123,4 +137,32 @@ You now have a production-ready REST API for inference in ~30 lines of code.
 >
 >What did the demo show about speed vs responsibility?
 
-After the workshop, write a 300–400 word reflection for your learning journal: _How does an ML engineer balance the pressure to innovate quickly with the responsibility to innovate safely?_
+After the workshop, write a 300–400 word reflection for your learning journal: _How does an ML engineer balance the pressure to innovate quickly with the responsibility to innovate safely?_ __"PLEASE NOTE: Any reflective questions that do not have KSBs associated with them are designed to help you consolidate learning after each workshop. They are lighter in nature than CPD questions and CPD tasks and do not directly contribute to KSB evidence. If you ever feel short on time, please prioritise completing your CPD questions and CPD tasks (which appear in Aptem and link directly to your KSBs) before returning to your reflections. Coaches will review your answers to support your progress and catch any misunderstandings, but they are not formally graded."__
+
+## Stretch and extend your learning: recommended reading
+
+Use these to deepen the specific skills you practised today: rapid MVP deployment, risk-aware design, and compliance by default. All the content mark as stretch/extend is __optional__ and based on your available time.
+
+### Core practice for ML engineers
+- **Andriy Burkov — Machine Learning Engineering**  
+  Practical end-to-end delivery playbook covering data, versioning, serving, and monitoring.  
+  [View on Amazon](https://www.amazon.co.uk/Machine-Learning-Engineering-Andriy-Burkov/dp/1999579577)
+
+- **Chip Huyen — Designing Machine Learning Systems**  
+  System-level patterns for real-world ML: retraining cadence, data pipelines, and monitoring.  
+  [View on Amazon](https://www.amazon.co.uk/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)
+
+### Process, governance and risk
+- **CRISP-ML(Q)**  
+  A machine learning process model with integrated quality assurance methodology.  
+  [“Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology” (arXiv)](https://arxiv.org/abs/2003.05155)
+
+- **NIST AI Risk Management Framework (AI RMF 1.0)**  
+  Official US framework for identifying, measuring and treating AI risks.  
+  [NIST AI RMF 1.0 (PDF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+
+### Tooling used in the demo
+- **Hugging Face Deep Learning Containers on Amazon SageMaker**  
+  Documentation for serving pre-trained models without custom containers.  
+  [AWS SageMaker × Hugging Face guide](https://docs.aws.amazon.com/sagemaker/latest/dg/hugging-face.html)
+

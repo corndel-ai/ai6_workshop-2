@@ -54,3 +54,8 @@ Focus on the top 3–5 open risks that most affect your MVP’s feasibility, eth
 > 💡 **Tip:**  
 > A strong risk register is concise, living, and transparent.  
 > If a stakeholder can glance at it and understand your project’s health in 30 seconds, you’ve succeeded.
+
+---
+Improvement ideas
+
+Adopt the table above and add a simple risk_score = likelihood * impact calculation.

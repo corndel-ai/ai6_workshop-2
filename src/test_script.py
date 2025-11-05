@@ -11,21 +11,12 @@ with open(IMAGE_PATH, "rb") as f:
 runtime = boto3.client("sagemaker-runtime")
 print(f"🚀 Sending {IMAGE_PATH} to endpoint {ENDPOINT_NAME}...")
 
-# --- OPTION A: Hugging Face format (recommended) ---
+# Send image to the endpoint using the Hugging Face-style JSON format
 response = runtime.invoke_endpoint(
     EndpointName=ENDPOINT_NAME,
     ContentType="application/json",
     Body=json.dumps({"inputs": image_b64})
 )
-
-# --- OPTION B: Alternate TensorFlow/PyTorch format ---
-"""
-response = runtime.invoke_endpoint(
-    EndpointName=ENDPOINT_NAME,
-    ContentType="application/json",
-    Body=json.dumps({"instances": [image_b64]})
-)
-"""
 
 try:
     result = json.loads(response["Body"].read().decode())
