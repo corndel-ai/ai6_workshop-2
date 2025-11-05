@@ -3,12 +3,16 @@
 
 **This is the second workshop of the Level 6 AI/ML Engineer programme, focusing on going from an idea to a Minimum Viable Product (MVP).**
 
-Read this file in conjunction with the auxiliary files: [`user_brief.md`](./user_brief.md) and [`model_card.md`](./model_card.md).
+You will work through activities in the [`activities` folder](./activities/) in order. You will then move onto the Technical Demo below.
+
+# Technical Demo
+
+Read this file in conjunction with the auxiliary files: [`activity-1_start.md`](./activities/activity-1/activity-1_start.md) and [`model_card.md`](./model_card.md).
 
 
 ## What you've already done this morning to prepare:
 
-You have discussed the Derm-Assist MVP case study, proposing a tool to help GPs triage skin lesion images. You should refer to both the user brief ([`user_brief.md`](./user_brief.md)) and the model card ([`model_card.md`](./model_card.md)) and ask your coach if anything is unclear about the brief and/or the model.
+You have discussed the Derm-Assist MVP case study, proposing a tool to help GPs triage skin lesion images. You should refer to both the user brief ([`activity-1_start.md`](./activities/activity-1/activity-1_start.md)) and the model card ([`model_card.md`](./model_card.md)) and ask your coach if anything is unclear about the brief and/or the model.
 
 Case studies are simplified but realistic scenarios designed to let you practise the translation of user needs into MVP features. Derm-Assist is not a real medical product. The exercise is about decision-making and risk awareness, not clinical accuracy.
 
