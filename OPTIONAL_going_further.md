@@ -1,4 +1,4 @@
-# Going Further: Derm-Assist MVP Extensions
+﻿# Going Further: Derm-Assist MVP Extensions
 
 You have scoped, risk-assessed, and deployed an initial Derm-Assist MVP using a pre-trained MobileNetV2 model. The pathways below help you build on that foundation whilst staying aligned to the workshop themes of rapid learning, risk awareness, and responsible delivery.
 
@@ -57,8 +57,10 @@ Scan your major cloud provider of interest to see what they offer before committ
 1. **AWS SageMaker JumpStart and built-in algorithms.**  
    - Read the AWS blog on [fine-tuning multimodal models](https://aws.amazon.com/blogs/machine-learning/fine-tune-multimodal-models-for-vision-and-text-use-cases-on-amazon-sagemaker-jumpstart/) and capture which pre-built notebooks or artefacts could accelerate Derm-Assist experiments.
    - Browse the [SageMaker built-in vision algorithm guide](https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-vision.html).
+   - Run the Pluralsight lab [Creating a TensorFlow Image Classifier in AWS SageMaker](https://app.pluralsight.com/hands-on/labs/ac22c1d0-9f38-43cb-90c7-00b118ae10d1?originUrl=https%3A%2F%2Fapp.pluralsight.com%2Fhands-on) to walk through spinning up the provided notebook instance, loading LEGO brick image arrays, training the Keras model, and reviewing single vs. batch predictions inside SageMaker.
 2. **Map equivalent Azure capabilities.**  
    - Review Azure Machine Learning's [Azure OpenAI GPT-4V tool](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/tools-reference/azure-open-ai-gpt-4v-tool?view=azureml-api-2) to see how multimodal prompts could complement Derm-Assist workflows.
    - Study how to [run ONNX AutoML image models for inference](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-inference-onnx-automl-image-models?view=azureml-api-2&tabs=multi-class) and [prepare datasets for AutoML images](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-prepare-datasets-for-automl-images?view=azureml-api-2&tabs=cli).
+   - Run the Pluralsight lab [Classifying Images with Azure Custom Vision](https://app.pluralsight.com/hands-on/labs/f70c794f-6a86-44c6-8cc0-4b3423407a32?originUrl=https%3A%2F%2Fapp.pluralsight.com%2Fhands-on) to practice logging into Azure with lab credentials, importing the Landmarks.zip dataset, tagging Golden Gate Bridge vs. Statue of Liberty photos, training a multiclass model, and validating predictions directly in the Custom Vision portal.
 3. **Investigate Google Cloud options.**  
    - Explore [Google Cloud Vision AI](https://docs.cloud.google.com/vision-ai/docs) to understand available pre-built models, AutoML flows, streaming capabilities, and regulatory positioning.
