@@ -24,7 +24,7 @@ You have scoped, risk-assessed, and deployed an initial Derm-Assist MVP using a 
 
 1. **Explore any Spaces that use https://huggingface.co/Anwarkh1/Skin_Cancer-Image_Classification**
    - Open the URL https://huggingface.co/Anwarkh1/Skin_Cancer-Image_Classification and in the bottom right-hand corner, open a few HF Spaces that have built small MVP web apps using Gradio (usually) on this model. For instance: https://huggingface.co/spaces/billster45/skin_research
-   - Could this be a next step in taking your MVP further to demonstrate and discuss this web app with stakeholders using public images only?
+   - As described in Aptem module *"2.3 Exploring Public Models In More Depth"*, could this be a next step in taking your MVP further to demonstrate and discuss this web app with stakeholders using public images only?
    - Here is the documentation for Hugging Face Spaces: https://huggingface.co/docs/hub/en/spaces-overview
    
 2. **Create your own web app in minutes**
