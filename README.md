@@ -3,12 +3,16 @@
 
 **This is the second workshop of the Level 6 AI/ML Engineer programme, focusing on going from an idea to a Minimum Viable Product (MVP).**
 
-Read this file in conjunction with the auxiliary files: [`user_brief.md`](./user_brief.md) and [`model_card.md`](./model_card.md).
+You will work through activities in the [`activities` folder](./activities/) in order. You will then move onto the Technical Demo below.
+
+# Technical Demo
+
+Read this file in conjunction with the auxiliary files: [`activity-1_start.md`](./activities/activity-1/activity-1_start.md) and [`model_card.md`](./model_card.md).
 
 
 ## What you've already done this morning to prepare:
 
-You have discussed the Derm-Assist MVP case study, proposing a tool to help GPs triage skin lesion images. You should refer to both the user brief ([`user_brief.md`](./user_brief.md)) and the model card ([`model_card.md`](./model_card.md)) and ask your coach if anything is unclear about the brief and/or the model.
+You have discussed the Derm-Assist MVP case study, proposing a tool to help GPs triage skin lesion images. You should refer to both the user brief ([`activity-1_start.md`](./activities/activity-1/activity-1_start.md)) and the model card ([`model_card.md`](./model_card.md)) and ask your coach if anything is unclear about the brief and/or the model.
 
 Case studies are simplified but realistic scenarios designed to let you practise the translation of user needs into MVP features. Derm-Assist is not a real medical product. The exercise is about decision-making and risk awareness, not clinical accuracy.
 
@@ -32,7 +36,7 @@ You would have tested your register against regulatory insights using a dual-LLM
 You have also discussed how "agility" is not just speed. It is the ability to re-scope and adapt without losing sight of core objectives. You are now ready to run a live demo.
 -----
 
-This demo will be using a real model. The model card is attached as a separate file (model_card.md).
+This demo will be using a real model. The model card is attached as a separate file [`model_card.md`](./model_card.md).
 
 ## Running the Live Demo Scripts
 
@@ -54,8 +58,8 @@ You will need an active AWS SageMaker Studio environment with a running JupyterL
 
 ### 2\. Upload and Run the Code
 
-1. Remember that to create your Jupyter environment, you can use the top search bar to look for Sagemaker. From Sagemaker, you want to look at the Notebooks item (in the left-hand-side menu), and from there create a new notebook instance. It will take 3-5 minutes to provision.
-2.  When it's ready, launch it as JupyterLab. Using the file browser on the left of your JupyterLab space, upload the `deployment_script.py` and `test_script.py` files. Alternatively, create two new Python files (not notebooks!) and paste the contents from this GitHub repo, then rename them so that the filenames are `deployment_script.py` and `test_script.py`.
+1. Remember that to create your Jupyter environment, you can use the top search bar to look for Sagemaker. From Sagemaker, you will remember selecting "Studio" under "Applications and IDEs" in the left-hand menu. You may want to refer to the [Workshop 1 README](https://github.com/corndel-ai/ai6_workshop-1/blob/main/README.md) for more detailed instructions. Create and run your JupyterLab space (remember that it might take a few minutes to provision after you click "Run Space"), then finally open it.
+2.  Using the file browser on the left of your JupyterLab space, upload the `deployment_script.py` and `test_script.py` files. Alternatively, create two new Python files (not notebooks!) and paste the contents from this GitHub repo, then rename them so that the filenames are `deployment_script.py` and `test_script.py`.
 3.  Create a new Jupyter Notebook (`.ipynb`) in the same top-level directory. At this point, your folder structure should be simple:
     ```
     deployment_script.py
@@ -102,7 +106,7 @@ As you watch the model deploy in just a few minutes, reflect on the planning you
 
 > **From "Dopamine Hit" to "Teachable Moment":** The demo is in two parts. First, we test the live endpoint with "fun" images (like a dog or a pizza). When the model correctly identifies them, it provides a "dopamine hit"—proof that the technology works and our endpoint is live\! But then, we test it with a proxy medical image. The model's inevitable failure to classify it correctly is the actual "teachable moment" here.
 
-> **Connecting Deployment to Risk and Responsibility:** This "failure" isn't a bug; it's a critical data point. It proves that the **Data Risk** we identified in our risk register is real—a generic model cannot solve a specific medical problem. This outcome directly informs the next sprint: we have de-risked the *technical* deployment, but now we must de-risk the *model* itself by acquiring domain-specific data.
+> **Connecting Deployment to Risk and Responsibility:** This "failure" isn't a bug; it's a critical data point. It proves that the **Data Risk** we may have identified in our risk register is real—a generic model cannot solve a specific medical problem. This outcome directly informs the next sprint: we have de-risked the *technical* deployment, but now we must de-risk the *model* itself by acquiring domain-specific data.
 
 This links directly back to the compliance stories on your project board. A model making incorrect predictions for a medical MVP has serious implications under regulations like the **EU AI Act**, which classifies many medical devices as "high-risk." The inability of our generic model to perform the task would need to be documented in a risk management system and would be a key finding in any Data Protection Impact Assessment (DPIA) under **GDPR**.
 
@@ -113,16 +117,17 @@ You will then carry out the curveball challenge as explained in:
 [`Curveball_brief.md`](./Curveball_brief.md).
 
 ### Workflow in plain English
-```
 Here’s what your script does step by step:
-Pick a model from Hugging Face (mobilenet_v2).
-Tell SageMaker what task it solves (image-classification).
-Spin up a Hugging Face container inside SageMaker with PyTorch + Transformers installed.
-Pull the model weights automatically from Hugging Face Hub into that container.
-Expose the model as a live HTTPS endpoint you can call.
-You now have a production-ready REST API for inference in ~30 lines of code.
-...But the requirements keep changing! The curveball challenge explains this.
 ```
+1. Pick a model from Hugging Face (mobilenet_v2).
+2. Tell SageMaker what task it solves (image-classification).
+3. Spin up a Hugging Face container inside SageMaker with PyTorch + Transformers installed.
+4. Pull the model weights automatically from Hugging Face Hub into that container.
+5. Expose the model as a live HTTPS endpoint you can call.
+6. You now have a production-ready REST API for inference in ~30 lines of code.
+```
+...But the requirements keep changing! The curveball challenge explains this.
+
 ## Reflection and Debrief
 
 1. Update your risk register with insights from the demo.
@@ -141,7 +146,7 @@ After the workshop, write a 300–400 word reflection for your learning journal:
 
 ## Stretch and extend your learning: recommended reading
 
-Use these to deepen the specific skills you practised today: rapid MVP deployment, risk-aware design, and compliance by default. All the content mark as stretch/extend is __optional__ and based on your available time.
+Use these to deepen the specific skills you practised today: rapid MVP deployment, risk-aware design, and compliance by default. All the content marked as stretch/extend is __optional__ and based on your available time.
 
 ### Core practice for ML engineers
 - **Andriy Burkov — Machine Learning Engineering**  

@@ -43,14 +43,6 @@ Focus on the top 3–5 open risks that most affect your MVP’s feasibility, eth
 
 ---
 
-## 🧩 Linked Artefacts
-- `MoSCoW_Board.png` – Feature prioritisation reference  
-- `Compliance_Stories.md` – DPIA and EU AI Act user stories  
-- `Model_Card.md` – Model limitations and known biases  
-- `Curveball_Notes.md` – Adaptation decisions from curveball challenge  
-
----
-
 > 💡 **Tip:**  
 > A strong risk register is concise, living, and transparent.  
 > If a stakeholder can glance at it and understand your project’s health in 30 seconds, you’ve succeeded.
