@@ -1,4 +1,4 @@
-﻿# Going Further: Derm-Assist MVP Extensions
+﻿# OPTIONAL: Derm-Assist MVP Extensions
 
 You have scoped, risk-assessed, and deployed an initial Derm-Assist MVP using a pre-trained MobileNetV2 model. The pathways below help you build on that foundation whilst staying aligned to the workshop themes of rapid learning, risk awareness, and responsible delivery.
 
