@@ -10,15 +10,11 @@
 ## 🔄 Curveball Summary
 During Workshop 2, your team faced an unexpected change or challenge that tested adaptability.  
 Briefly describe what happened, referencing one or more **Curveball Cards** from the activity in  
-[`Curveball_brief.md`](./Curveball_brief.md).
+[`activity-4_start.md`](./activity-4_start.md).
 
 > _Example:_  
 > The client requested support for new image formats (HEIC) late in development.  
 > This required adjustments in the preprocessing pipeline and cost estimation.
-
-Once you’ve summarised your response here, continue to the  
-**[Curveball Task – In-Depth Brief](./Curveball_task.md)**  
-to explore the same scenario from a governance, DPIA, and lawful-processing perspective.
 
 ---
 
@@ -36,7 +32,7 @@ _Assign names and roles (e.g. Data Lead, UX Lead, Compliance Advisor)._
 
 ## ⚠️ New or Updated Risks
 If the curveball introduced new risks, record them here and cross-reference your  
-[`risk_register.md`](./risk_register.md).  
+[`risk-register.md`](/activities/activity-3/risk-register.md).  
 
 | ID | New / Changed Risk | Likelihood | Impact | Mitigation | Owner | Status |
 |----|--------------------|-------------|---------|-------------|--------|---------|
@@ -49,7 +45,7 @@ __PLEASE NOTE: "Any reflective questions that do not have KSBs associated with t
 - What did this teach us about flexibility in ML projects?  
 - How can this inform future governance or sprint planning?  
 - Which of these insights link to compliance or data-protection considerations explored in the  
-  [`curveball_task.md`](./Curveball_task.md) exercise?
+  [`activity-4_start.md`](./activity-4_start.md) exercise?
 
 ---
 
