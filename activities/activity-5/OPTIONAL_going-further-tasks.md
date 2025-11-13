@@ -7,8 +7,9 @@ You have scoped, risk-assessed, and deployed an initial Derm-Assist MVP using a 
 ## Task 1: Swap the base model for one already fine-tuned for skin cancer detection
 
 1. **Change the model to one fine-tuned on skin cancer images.**
-   - Deploy [Anwarkh1/Skin_Cancer-Image_Classification](https://huggingface.co/Anwarkh1/Skin_Cancer-Image_Classification), a ViT fine-tuned on Marmal88's Skin Cancer dataset. Review the model card to understand the seven-class label space, the ImageNet21K pre-training, and performance metrics (e.g. 96.9% validation accuracy after five epochs).
-   - In `src/deployment_script.py`, change the `HF_MODEL_ID` to point to `Anwarkh1/Skin_Cancer-Image_Classification`.
+   - In `SageMaker Studio ➡️ Deployments ➡️ Endpoints`, delete your existing endpoint. This reduces the risk that Pluralsight will automatically shut down your sandbox for [potential abuse](https://help.pluralsight.com/hc/en-us/articles/24393050669716-Hands-on-playground-and-labs-abuse-protocol).
+   - Now Deploy [Anwarkh1/Skin_Cancer-Image_Classification](https://huggingface.co/Anwarkh1/Skin_Cancer-Image_Classification), a ViT fine-tuned on Marmal88's Skin Cancer dataset. Review the model card to understand the seven-class label space, the ImageNet21K pre-training, and performance metrics (e.g. 96.9% validation accuracy after five epochs).
+   - To do this, in `src/deployment_script.py`, change the `HF_MODEL_ID` to point to `Anwarkh1/Skin_Cancer-Image_Classification`.
    - Compare the [MobileNetV2 model card](https://huggingface.co/google/mobilenet_v2_1.0_224) with the [Skin Cancer ViT model card](https://huggingface.co/Anwarkh1/Skin_Cancer-Image_Classification). What differences do you notice in model size, architecture, training data, and intended use? Consider what implications these differences might have for your MVP deployment (e.g. performance, resource requirements, suitability for the task).
    - Search HuggingFace for other models already fine-tuned for skin cancer detection that you could also test and compare: https://huggingface.co/models?sort=downloads&search=skin+cancer
 2. **Plan how you will evaluate performance.**
