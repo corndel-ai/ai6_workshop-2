@@ -33,7 +33,7 @@ Think about whether any of you will be comfortable volunteering to share your Mo
 ## Resources
 - [Understanding the MoSCoW prioritisation](https://community.atlassian.com/forums/App-Central-articles/Understanding-the-MoSCoW-prioritization-How-to-implement-it-into/ba-p/2463999)
 - [Cheat sheet](./moscow-template.png)
-- [Miro no-signup](https://miro.com/online-whiteboard/) whiteboard tool (use the "Quick Retrospective" template to get started quickly)
+- [Miro no-signup](https://miro.com/online-whiteboard/) whiteboard tool. Use the ["MoSCoW Matrix"](https://miro.com/app/dashboard/?tpTemplate=ae815794-4b8b-45bb-b9d2-f4950e1754ab&isCustom=false&share_link_id=968591177345) blank template to get started quickly 
 - [User story](https://www.atlassian.com/agile/project-management/user-stories) template: `As a [persona], I [want to], [so that].`
 
 ---
