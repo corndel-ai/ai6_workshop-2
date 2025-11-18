@@ -1,9 +1,11 @@
 # Derm-Assist Project Board
 ## Deliverables from your team
-- A project board containing user stories generated from all "Musts" shared by the workshop group.
+- A project board containing user stories generated from all "Musts" shared by the workshop group (the column doesn't matter, could be TODO or Backlog).
 - At least two **compliance-flavoured user stories** added to your board e.g.:
 	- Draft **DPIA (Data Protection Impact Assessment) skeleton** (GDPR).
 	- **Risk flag register + compliance checklist** (EU AI Act).
+- Add a clear definition of done to every user story you add to your board.
+- (Optionally, does the user story need refining or clarifying?).
 
 Think about whether any of you will be comfortable volunteering to share your project board in front of all learners. We will ask for a volunteer from one group for sharing.
 
