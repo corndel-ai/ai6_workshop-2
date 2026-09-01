@@ -30,7 +30,7 @@ Use or adapt them when updating your Project Board during the **Curveball Challe
 - Risk register lists at least three risks (bias, explainability, user over-reliance).  
 - Compliance checklist covers transparency and human oversight requirements.  
 - Linked to the MVP Project Board as attachments or cards.  
-- Updated whenever a new risk is identified in [`risk_register.md`](./risk_register.md).  
+- Updated whenever a new risk is identified in [`risk-register.md`](../activity-3/risk-register.md).  
 
 ---
 
